@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0a0a0a] text-white;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-gradient-to-br from-gray-800 to-gray-900 p-4 rounded-lg shadow-lg;
+  }
+
+  .button-primary {
+    @apply bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold py-2 px-4 rounded shadow hover:from-blue-600 hover:to-purple-600 transition-colors;
+  }
+
+  .button-secondary {
+    @apply bg-transparent border border-gray-600 text-gray-300 py-2 px-4 rounded hover:bg-gray-800 transition-colors;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .custom-scrollbar {
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      @apply bg-gray-800;
+    }
+    &::-webkit-scrollbar-thumb {
+      @apply bg-gray-600 rounded;
+    }
+  }
+}
